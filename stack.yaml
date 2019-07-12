@@ -1,0 +1,6 @@
+packages: .
+resolver: /var/devel/common/build/stack.yaml
+
+nix:
+  enable: true
+  shell-file: stack.nix

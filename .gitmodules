@@ -1,0 +1,6 @@
+[submodule "lib/core"]
+	path = lib/core
+	url = git@github.com:idris-lang/Idris-dev.git
+[submodule "lib/ocaml"]
+	path = lib/ocaml
+	url = git@github.com:bef0/idris-ocaml.git
