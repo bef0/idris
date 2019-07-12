@@ -1,4 +1,4 @@
-packages: [.]
+packages: [lib/core,lib/ocaml]
 resolver: /var/devel/common/build/stack.yaml
 
 nix:
