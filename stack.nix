@@ -4,6 +4,6 @@ with (import <nixpkgs> {});
 haskell.lib.buildStackProject {
     inherit ghc;
     src = ./.;
-    name = "main";
+    name = "idris";
     buildInputs = [ clang libiconv zlib bzip2 ];
 }

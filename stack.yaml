@@ -1,4 +1,4 @@
-packages: .
+packages: [.]
 resolver: /var/devel/common/build/stack.yaml
 
 nix:
