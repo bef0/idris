@@ -1,9 +1,11 @@
 {ghc}:
 with (import <nixpkgs> {});
 
-haskell.lib.buildStackProject {
+let libs = [clang libiconv bzip2 gmp libffi ncurses nodejs perl zlib];
+    core = lib.optionals stdenv.isDarwin (with darwin.apple_sdk.frameworks; [Cocoa CoreServices]);
+in  haskell.lib.buildStackProject {
     inherit ghc;
     src = ./.;
     name = "idris";
-    buildInputs = [ clang libiconv zlib bzip2 ];
+    buildInputs = builtins.concatLists [core libs];
 }
